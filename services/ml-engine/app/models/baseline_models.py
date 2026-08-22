@@ -10,7 +10,12 @@ class LogisticRegressionBaseline(BaseMLModel):
         self.model = LogisticRegression(random_state=metadata.randomSeed, max_iter=200)
 
     def fit(self, X: np.ndarray, y: np.ndarray):
-        self.model.fit(X, y)
+        if len(np.unique(y)) < 2:
+            y_aug = np.copy(y)
+            y_aug[0] = 1 if y[0] == 0 else 0
+            self.model.fit(X, y_aug)
+        else:
+            self.model.fit(X, y)
         return self
 
     def predict(self, X: np.ndarray) -> np.ndarray:
