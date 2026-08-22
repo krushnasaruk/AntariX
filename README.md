@@ -181,6 +181,11 @@ Train the entire machine learning and reinforcement learning pipeline in Google 
   4. Queries telemetry using columnar **DuckDB SQL**.
   5. Plots convergence curves and exports `antrix-trained-models.zip`.
 
+<div align="center">
+  <img src="./traininggraph.png" alt="PPO Training Convergence & Objective 5 Safety Gatekeeper Interceptions" width="100%" />
+  <p><em>Figure: PPO Autonomous Policy Reward Convergence (Left) and Objective 5 Safety Gatekeeper Zero-Breach Enforcement (Right).</em></p>
+</div>
+
 ---
 
 ## 🎬 10-Step Interactive Judge Demonstration Flow
