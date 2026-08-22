@@ -36,7 +36,7 @@ export function Sidebar({ activePage, onSelectPage, collapsed, onToggleCollapse 
       }}>
         {!collapsed && (
           <span style={{
-            fontSize: '0.6875rem',
+            fontSize: '0.65rem',
             fontWeight: 600,
             color: '#64748b',
             letterSpacing: '0.04em',
@@ -50,7 +50,7 @@ export function Sidebar({ activePage, onSelectPage, collapsed, onToggleCollapse 
           style={{
             background: 'none', border: 'none', color: '#64748b',
             cursor: 'pointer', padding: 2, display: 'flex',
-            borderRadius: 4
+            borderRadius: 'var(--radius-sm)'
           }}
           title={collapsed ? 'Expand Sidebar' : 'Collapse Sidebar'}
         >
@@ -94,21 +94,21 @@ export function Sidebar({ activePage, onSelectPage, collapsed, onToggleCollapse 
                       width: '100%',
                       padding: collapsed ? '8px' : '7px 10px',
                       background: isActive
-                        ? 'rgba(56, 189, 248, 0.12)'
+                        ? 'var(--structure-ink)'
                         : 'transparent',
                       border: 'none',
-                      borderLeft: isActive ? '3px solid #38bdf8' : '3px solid transparent',
-                      borderRadius: 6,
+                      borderLeft: isActive ? '2px solid var(--structure-ink-light)' : '2px solid transparent',
+                      borderRadius: 'var(--radius-sm)',
                       color: isActive ? '#f1f5f9' : '#94a3b8',
                       cursor: 'pointer',
-                      transition: 'all 0.15s ease',
-                      fontSize: '0.8125rem',
+                      transition: 'none',
+                      fontSize: '0.75rem',
                       fontWeight: isActive ? 600 : 500,
                       textAlign: 'left'
                     }}
                     onMouseEnter={e => {
                       if (!isActive) {
-                        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)';
+                        e.currentTarget.style.background = 'rgba(51, 65, 85, 0.4)'; // Hover state
                         e.currentTarget.style.color = '#f1f5f9';
                       }
                     }}
@@ -119,7 +119,7 @@ export function Sidebar({ activePage, onSelectPage, collapsed, onToggleCollapse 
                       }
                     }}
                   >
-                    <Icon size={15} style={{ flexShrink: 0, color: isActive ? '#38bdf8' : '#64748b' }} />
+                    <Icon size={14} style={{ flexShrink: 0, color: isActive ? '#f1f5f9' : '#64748b' }} />
                     {!collapsed && <span style={{ whiteSpace: 'nowrap' }}>{page}</span>}
                   </button>
                 );

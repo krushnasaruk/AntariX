@@ -16,9 +16,8 @@ export function StatusBadge({ variant = 'info', children, pulse = false, icon = 
       {pulse && (
         <span
           style={{
-            width: 6, height: 6, borderRadius: '50%',
+            width: 4, height: 8,
             backgroundColor: 'currentColor',
-            animation: 'pulse-dot 1.5s ease-in-out infinite',
             flexShrink: 0
           }}
         />

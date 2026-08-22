@@ -33,34 +33,34 @@ export function SolClock() {
     <div style={{
       display: 'flex',
       alignItems: 'center',
-      gap: 16,
+      gap: 10,
       fontFamily: 'var(--font-mono)',
-      fontSize: '0.6875rem'
+      fontSize: '0.75rem'
     }}>
       <div style={{
         display: 'flex', alignItems: 'center', gap: 6,
-        padding: '4px 12px',
-        background: 'rgba(251, 146, 60, 0.08)',
-        border: '1px solid rgba(251, 146, 60, 0.20)',
-        borderRadius: 'var(--radius-md)'
+        padding: '6px 10px',
+        background: 'var(--bg-app)',
+        border: '1px solid var(--structure-ink)',
+        borderRadius: 'var(--radius-sm)'
       }}>
-        <Sun size={12} color="var(--mars-400)" />
-        <span style={{ color: 'var(--text-muted)', fontSize: '0.5625rem', fontFamily: 'var(--font-hud)', letterSpacing: '0.06em' }}>SOL</span>
-        <span style={{ color: 'var(--mars-400)', fontWeight: 700 }}>{currentSol}</span>
-        <span style={{ color: 'var(--text-muted)' }}>•</span>
-        <span style={{ color: 'var(--mars-300)' }}>{mtcStr}</span>
-        <span style={{ color: 'var(--text-muted)', fontSize: '0.5rem' }}>MTC</span>
+        <Sun size={12} color="var(--signal-caution)" />
+        <span style={{ color: '#94A3B8', fontSize: '0.6rem', fontFamily: 'var(--font-main)', letterSpacing: '0.05em' }}>SOL</span>
+        <span className="tabular-nums" style={{ color: 'var(--signal-caution)', fontWeight: 700 }}>{currentSol}</span>
+        <span style={{ color: 'var(--structure-ink-light)' }}>•</span>
+        <span className="tabular-nums" style={{ color: 'var(--signal-caution)' }}>{mtcStr}</span>
+        <span style={{ color: '#94A3B8', fontSize: '0.6rem' }}>MTC</span>
       </div>
       <div style={{
         display: 'flex', alignItems: 'center', gap: 6,
-        padding: '4px 12px',
-        background: 'rgba(34, 211, 238, 0.05)',
-        border: '1px solid rgba(34, 211, 238, 0.12)',
-        borderRadius: 'var(--radius-md)'
+        padding: '6px 10px',
+        background: 'var(--bg-app)',
+        border: '1px solid var(--structure-ink)',
+        borderRadius: 'var(--radius-sm)'
       }}>
-        <Clock size={12} color="var(--cyan-500)" />
-        <span style={{ color: 'var(--cyan-400)' }}>{utcStr}</span>
-        <span style={{ color: 'var(--text-muted)', fontSize: '0.5rem' }}>UTC</span>
+        <Clock size={12} color="var(--structure-ink-light)" />
+        <span className="tabular-nums" style={{ color: '#E2E8F0' }}>{utcStr}</span>
+        <span style={{ color: '#94A3B8', fontSize: '0.6rem' }}>UTC</span>
       </div>
     </div>
   );

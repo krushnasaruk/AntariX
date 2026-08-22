@@ -10,13 +10,13 @@ export function Header({ latencySec, connected, activePage, onSelectPage, onOpen
       {/* Brand */}
       <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
         <div style={{
-          width: 30, height: 30, borderRadius: 6,
-          background: 'linear-gradient(135deg, #0284c7, #38bdf8)',
+          width: 28, height: 28, borderRadius: 'var(--radius-sm)',
+          background: 'var(--structure-ink)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          boxShadow: '0 2px 10px rgba(56, 189, 248, 0.3)',
+          border: '1px solid var(--structure-ink-light)',
           flexShrink: 0
         }}>
-          <Sparkles size={16} color="#ffffff" />
+          <Sparkles size={14} color="#ffffff" />
         </div>
 
         <div>
@@ -35,21 +35,22 @@ export function Header({ latencySec, connected, activePage, onSelectPage, onOpen
               fontSize: '0.625rem',
               fontWeight: 600,
               padding: '1px 6px',
-              borderRadius: 4,
-              background: 'rgba(255, 255, 255, 0.08)',
-              color: '#94a3b8',
-              letterSpacing: '0.02em'
+              borderRadius: 'var(--radius-xs)',
+              border: '1px solid var(--structure-ink-light)',
+              color: '#94A3B8',
+              letterSpacing: '0.02em',
+              textTransform: 'uppercase'
             }}>
               Mission Control
             </span>
           </div>
           <div style={{
-            fontFamily: 'var(--font-main)',
-            fontSize: '0.6875rem',
-            color: '#64748b',
-            letterSpacing: '0.01em'
+            fontFamily: 'var(--font-mono)',
+            fontSize: '0.65rem',
+            color: '#64748B',
+            letterSpacing: '0.05em'
           }}>
-            Jezero Crater Sector 07 • Earth–Mars Autonomous Ground Link
+            JEZERO CRATER SEC-07 • EARTH-MARS AUTONOMOUS GROUND LINK
           </div>
         </div>
       </div>
@@ -65,33 +66,31 @@ export function Header({ latencySec, connected, activePage, onSelectPage, onOpen
         <div style={{
           display: 'flex', alignItems: 'center', gap: 6,
           padding: '4px 10px',
-          background: connected ? 'rgba(16, 185, 129, 0.08)' : 'rgba(244, 63, 94, 0.08)',
-          border: `1px solid ${connected ? 'rgba(16, 185, 129, 0.25)' : 'rgba(244, 63, 94, 0.25)'}`,
-          borderRadius: 6,
+          background: 'var(--bg-app)',
+          border: '1px solid var(--structure-ink)',
+          borderRadius: 'var(--radius-sm)',
           fontSize: '0.75rem',
           fontWeight: 600,
-          color: connected ? '#34d399' : '#fb7185'
+          color: connected ? 'var(--signal-nominal)' : 'var(--signal-critical)'
         }}>
           <span style={{
-            width: 6, height: 6, borderRadius: '50%',
-            background: connected ? '#10b981' : '#f43f5e',
-            animation: connected ? 'pulse-dot 1.5s infinite' : 'none'
+            width: 4, height: 8,
+            background: connected ? 'var(--signal-nominal)' : 'var(--signal-critical)'
           }} />
-          {connected ? 'DSN Online' : 'Link Offline'}
+          {connected ? 'DSN ONLINE' : 'LINK OFFLINE'}
         </div>
 
         <button
           onClick={onOpenJudgeTour}
           className="hud-button"
           style={{
-            background: 'rgba(251, 191, 36, 0.1)',
-            borderColor: 'rgba(251, 191, 36, 0.35)',
-            color: '#fbbf24',
-            fontWeight: 700
+            borderColor: 'var(--signal-caution)',
+            color: 'var(--signal-caution)',
+            fontWeight: 600
           }}
         >
-          <Award size={13} color="#fbbf24" />
-          Judge Demo Tour
+          <Award size={13} color="var(--signal-caution)" />
+          JUDGE DEMO
         </button>
 
         <button
@@ -99,7 +98,7 @@ export function Header({ latencySec, connected, activePage, onSelectPage, onOpen
           className="hud-button hud-button-primary"
         >
           <Radio size={13} />
-          Uplink Console
+          UPLINK CONSOLE
         </button>
       </div>
     </header>
