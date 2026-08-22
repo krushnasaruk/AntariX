@@ -200,6 +200,22 @@ When presenting to hackathon judges, click the **"Judge Demo Tour"** button in t
 
 ---
 
+## ❓ Potential Questions from Judges
+
+**Q1: Is the data on the dashboard real or faked?**
+**A1:** It's completely real! Every single number on the screen is generated live from our physical simulation of the Mars environment. We don't use any fake or hardcoded "dummy" data.
+
+**Q2: What happens if your AI makes a bad or dangerous decision?**
+**A2:** The AI is just an advisor. Our **Safety Validator** has the final say. It uses strict math to enforce 10 physical rules (like battery limits and safe driving angles). If the AI suggests something dangerous, the Safety Validator instantly blocks it. 
+
+**Q3: How do you handle the 14-day communication blackout when the Sun blocks Mars?**
+**A3:** We use a technology called Delay-Tolerant Networking (DTN). It safely stores all commands and data in memory and automatically forwards them the moment the connection is restored. This ensures absolutely zero data is lost.
+
+**Q4: Why is your system better than humans driving the rover from Earth?**
+**A4:** Because Earth is over 12 minutes away at the speed of light! If the rover starts slipping down a crater, a human operator on Earth won't even know about it for 12 minutes. Our onboard AI detects the slip and reacts in just 8 milliseconds to save the rover.
+
+---
+
 ## 📂 Repository Structure
 
 ```text
