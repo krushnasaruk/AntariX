@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FeatureVector",
+  "description": "Versioned ML Feature Vector Schema for Mars Digital Twin Datasets",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "feature_set_version": { "type": "string" },
+    "episode_id": { "type": "string" },
+    "simulation_time": { "type": "number" },
+    "battery_remaining": { "type": "number" },
+    "battery_drain_rate": { "type": "number" },
+    "distance_to_base": { "type": "number" },
+    "distance_to_sample": { "type": "number" },
+    "distance_to_obstacle": { "type": "number" },
+    "distance_to_hazard": { "type": "number" },
+    "terrain_risk": { "type": "number" },
+    "weather_severity": { "type": "number" },
+    "communication_delay": { "type": "number" },
+    "mission_progress": { "type": "number" },
+    "return_energy_margin": { "type": "number" },
+    "risk_score": { "type": "number" }
+  },
+  "required": ["feature_set_version", "episode_id", "simulation_time", "battery_remaining"]
+}

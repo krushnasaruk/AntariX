@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TrainingConfig",
+  "description": "Versioned Schema for ML/RL Training Job Configuration",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "experimentName": { "type": "string" },
+    "modelType": { "type": "string" },
+    "algorithm": { "type": "string" },
+    "datasetId": { "type": "string" },
+    "seed": { "type": "integer" },
+    "hyperparameters": { "type": "object" },
+    "device": { "type": "string" }
+  },
+  "required": ["experimentName", "modelType", "algorithm", "datasetId", "seed"]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Realistic Deep Space Mode",
+  "latencySeconds": 750,
+  "packetLossRate": 0.03,
+  "dustStormActive": false
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AutonomyObservation",
+  "description": "Unified Observation Payload for Earth-Mars Autonomous Mission System",
+  "type": "object",
+  "properties": {
+    "timestamp": { "type": "number" },
+    "mission": { "type": "object" },
+    "currentTask": { "type": ["object", "null"] },
+    "readyTasks": { "type": "array" },
+    "completedTasksCount": { "type": "number" },
+    "totalTasksCount": { "type": "number" },
+    "missionProgress": { "type": "number" },
+    "resources": { "type": "object" },
+    "constraints": { "type": "object" },
+    "rover": { "type": "object" },
+    "environment": { "type": "object" },
+    "communication": { "type": "object" },
+    "recentEvents": { "type": "array" }
+  },
+  "required": ["timestamp", "mission", "rover", "environment", "communication"]
+}

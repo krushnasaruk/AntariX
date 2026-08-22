@@ -1,0 +1,30 @@
+import React from 'react';
+
+const VARIANTS = {
+  success: 'badge-success',
+  warning: 'badge-warning',
+  danger: 'badge-danger',
+  info: 'badge-info',
+  mars: 'badge-mars',
+  neutral: 'badge-neutral',
+  purple: 'badge-purple'
+};
+
+export function StatusBadge({ variant = 'info', children, pulse = false, icon = null }) {
+  return (
+    <span className={`badge ${VARIANTS[variant] || VARIANTS.info}`}>
+      {pulse && (
+        <span
+          style={{
+            width: 6, height: 6, borderRadius: '50%',
+            backgroundColor: 'currentColor',
+            animation: 'pulse-dot 1.5s ease-in-out infinite',
+            flexShrink: 0
+          }}
+        />
+      )}
+      {icon && <span style={{ fontSize: '0.7rem' }}>{icon}</span>}
+      {children}
+    </span>
+  );
+}

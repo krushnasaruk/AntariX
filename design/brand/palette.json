@@ -1,0 +1,13 @@
+{
+  "brand": "Earth-Mars Autonomous Mission",
+  "colors": {
+    "marsOrange": "#c2410c",
+    "marsGlow": "#fb923c",
+    "deepSpaceNavy": "#070a12",
+    "cyberCyan": "#06b6d4",
+    "neonCyan": "#22d3ee",
+    "nominalGreen": "#10b981",
+    "warningYellow": "#f59e0b",
+    "alertRed": "#ef4444"
+  }
+}

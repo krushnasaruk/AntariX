@@ -1,0 +1,32 @@
+{
+  "name": "earth-mars-autonomous-mission",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Delay-tolerant autonomous Earth-Mars space mission control system, AI decision engine, and simulation core.",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "node scripts/development/start-dev.js",
+    "dev:frontend": "npm run dev --workspace=apps/frontend",
+    "dev:backend": "npm run dev --workspace=apps/backend",
+    "dev:ai": "npm run dev --workspace=apps/ai-engine",
+    "build": "npm run build --workspaces --if-present",
+    "test": "node scripts/testing/run-all-tests.js",
+    "seed": "node scripts/demo/seed-simulation-data.js",
+    "setup": "node scripts/setup/bootstrap.js"
+  },
+  "keywords": [
+    "mars-rover",
+    "autonomous-mission",
+    "dtn",
+    "delay-tolerant-networking",
+    "telemetry",
+    "ai-engine",
+    "space-simulation"
+  ],
+  "author": "AntriX Space Systems Engineering Team",
+  "license": "MIT"
+}

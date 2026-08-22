@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TelemetryRecord",
+  "description": "Versioned Timestep Telemetry Schema for Mars Digital Twin",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "timestamp": { "type": "number" },
+    "mission_id": { "type": "string" },
+    "episode_id": { "type": "string" },
+    "simulation_time": { "type": "number" },
+    "rover_position_x": { "type": "number" },
+    "rover_position_y": { "type": "number" },
+    "velocity_vx": { "type": "number" },
+    "velocity_vy": { "type": "number" },
+    "heading": { "type": "number" },
+    "battery": { "type": "number" },
+    "battery_drain_rate": { "type": "number" },
+    "rover_health": { "type": "string" },
+    "terrain": { "type": "string" },
+    "weather": { "type": "string" },
+    "visibility": { "type": "number" },
+    "communication_state": { "type": "string" },
+    "one_way_delay": { "type": "number" },
+    "round_trip_delay": { "type": "number" },
+    "current_task": { "type": "string" },
+    "task_progress": { "type": "number" },
+    "risk_score": { "type": "number" }
+  },
+  "required": ["timestamp", "mission_id", "episode_id", "simulation_time", "battery", "rover_health", "communication_state"]
+}

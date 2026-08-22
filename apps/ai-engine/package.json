@@ -1,0 +1,14 @@
+{
+  "name": "@earth-mars/ai-engine",
+  "version": "1.0.0",
+  "main": "src/api/aiServer.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/api/aiServer.js",
+    "dev": "node src/api/aiServer.js",
+    "test": "node tests/aiEngine.test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

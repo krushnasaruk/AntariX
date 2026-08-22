@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InferenceResponse",
+  "description": "Versioned ML/RL Inference Response Schema",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "modelId": { "type": "string" },
+    "modelVersion": { "type": "string" },
+    "prediction": { "type": ["object", "string", "number"] },
+    "confidence": { "type": "number" },
+    "timestamp": { "type": "number" },
+    "explanation": { "type": "object" }
+  },
+  "required": ["modelId", "prediction", "confidence"]
+}

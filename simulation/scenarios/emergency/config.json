@@ -1,0 +1,5 @@
+{
+  "scenarioId": "emergency",
+  "title": "Subsystem Power Anomaly Emergency",
+  "objective": "Execute immediate auto-recovery to Safe Mode."
+}

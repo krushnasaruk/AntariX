@@ -1,0 +1,5 @@
+{
+  "scenarioId": "solar-conjunction",
+  "title": "Solar Conjunction Communication Blackout",
+  "objective": "Operate 14 days autonomously without Earth uplink."
+}

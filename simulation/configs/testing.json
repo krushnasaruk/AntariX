@@ -1,0 +1,6 @@
+{
+  "name": "Integration Test Mode",
+  "latencySeconds": 2,
+  "packetLossRate": 0,
+  "dustStormActive": false
+}

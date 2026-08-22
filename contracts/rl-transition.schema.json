@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "RLTransition",
+  "description": "Versioned Gymnasium RL Transition Tuple Schema",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "observation": { "type": "array" },
+    "action": { "type": "integer" },
+    "reward": { "type": "number" },
+    "nextObservation": { "type": "array" },
+    "terminated": { "type": "boolean" },
+    "truncated": { "type": "boolean" },
+    "info": { "type": "object" }
+  },
+  "required": ["observation", "action", "reward", "nextObservation", "terminated", "truncated"]
+}

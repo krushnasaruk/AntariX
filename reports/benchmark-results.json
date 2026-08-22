@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-08-22T11:30:30.388Z",
+  "environment": "Mars Crater-07 Simulation",
+  "masterSeed": 42,
+  "scenariosEvaluated": 4,
+  "policies": {
+    "FIFO_BASELINE": {
+      "policyName": "FIFO_BASELINE",
+      "successRate": "100%",
+      "successCount": 4,
+      "totalScenarios": 4,
+      "meanEnergyConsumedWh": 466,
+      "safetyViolations": 19,
+      "autonomyDuringBlackoutSec": 18000,
+      "earthGuidanceRequests": 0
+    },
+    "PRIORITY_BASELINE": {
+      "policyName": "PRIORITY_BASELINE",
+      "successRate": "100%",
+      "successCount": 4,
+      "totalScenarios": 4,
+      "meanEnergyConsumedWh": 454,
+      "safetyViolations": 0,
+      "autonomyDuringBlackoutSec": 18000,
+      "earthGuidanceRequests": 0
+    },
+    "RULE_BASED": {
+      "policyName": "RULE_BASED",
+      "successRate": "100%",
+      "successCount": 4,
+      "totalScenarios": 4,
+      "meanEnergyConsumedWh": 304,
+      "safetyViolations": 0,
+      "autonomyDuringBlackoutSec": 18000,
+      "earthGuidanceRequests": 0
+    },
+    "ML_POLICY": {
+      "policyName": "ML_POLICY",
+      "successRate": "100%",
+      "successCount": 4,
+      "totalScenarios": 4,
+      "meanEnergyConsumedWh": 304,
+      "safetyViolations": 0,
+      "autonomyDuringBlackoutSec": 18000,
+      "earthGuidanceRequests": 0
+    },
+    "RL_POLICY": {
+      "policyName": "RL_POLICY",
+      "successRate": "100%",
+      "successCount": 4,
+      "totalScenarios": 4,
+      "meanEnergyConsumedWh": 304,
+      "safetyViolations": 0,
+      "autonomyDuringBlackoutSec": 18000,
+      "earthGuidanceRequests": 0
+    }
+  }
+}

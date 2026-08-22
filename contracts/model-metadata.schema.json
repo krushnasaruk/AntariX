@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ModelMetadata",
+  "description": "Versioned Model Registry Metadata Schema",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "modelId": { "type": "string" },
+    "modelVersion": { "type": "string" },
+    "modelType": { "type": "string" },
+    "algorithm": { "type": "string" },
+    "datasetId": { "type": "string" },
+    "datasetVersion": { "type": "string" },
+    "featureVersion": { "type": "string" },
+    "randomSeed": { "type": "integer" },
+    "status": { "type": "string" },
+    "metrics": { "type": "object" },
+    "artifactPath": { "type": "string" },
+    "createdAt": { "type": "number" }
+  },
+  "required": ["modelId", "modelVersion", "modelType", "algorithm", "datasetId", "status"]
+}

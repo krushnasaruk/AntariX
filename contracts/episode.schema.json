@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EpisodeRecord",
+  "description": "Versioned Episode Record Schema for Mars Digital Twin",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "episode_id": { "type": "string" },
+    "scenario_id": { "type": "string" },
+    "seed": { "type": "integer" },
+    "start_time": { "type": "number" },
+    "end_time": { "type": "number" },
+    "duration": { "type": "number" },
+    "termination_reason": { "type": "string" },
+    "success": { "type": "boolean" },
+    "telemetry_reference": { "type": "string" },
+    "event_reference": { "type": "string" }
+  },
+  "required": ["episode_id", "scenario_id", "seed", "start_time", "end_time", "success"]
+}

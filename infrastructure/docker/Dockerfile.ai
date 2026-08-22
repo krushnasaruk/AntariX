@@ -1,0 +1,8 @@
+FROM node:20-alpine
+WORKDIR /app
+COPY package*.json ./
+COPY apps/ai-engine/package*.json ./apps/ai-engine/
+RUN npm install
+COPY . .
+EXPOSE 5000
+CMD ["npm", "run", "start", "--workspace=apps/ai-engine"]

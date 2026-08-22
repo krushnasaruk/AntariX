@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TwinState",
+  "description": "Versioned Canonical State Snapshot for Mars Digital Twin",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "timestamp": { "type": "number" },
+    "simulationTime": { "type": "number" },
+    "episodeId": { "type": "string" },
+    "scenarioId": { "type": "string" },
+    "mission": { "type": "object" },
+    "rover": { "type": "object" },
+    "environment": { "type": "object" },
+    "communication": { "type": "object" },
+    "currentPlan": { "type": ["object", "null"] },
+    "decisionState": { "type": "object" },
+    "intelligenceReport": { "type": "object" },
+    "learningRecommendation": { "type": "object" },
+    "safetyValidationState": { "type": "object" }
+  },
+  "required": ["timestamp", "simulationTime", "episodeId", "scenarioId", "rover", "environment", "communication"]
+}

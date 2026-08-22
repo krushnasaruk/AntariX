@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SimulationEvent",
+  "description": "Versioned Event Schema for Mars Digital Twin",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "event_id": { "type": "string" },
+    "episode_id": { "type": "string" },
+    "simulation_time": { "type": "number" },
+    "event_type": { "type": "string" },
+    "source": { "type": "string" },
+    "payload": { "type": "object" }
+  },
+  "required": ["event_id", "episode_id", "simulation_time", "event_type", "source"]
+}

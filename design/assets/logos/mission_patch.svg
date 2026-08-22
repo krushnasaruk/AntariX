@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <polygon points="100,10 180,60 180,140 100,190 20,140 20,60" fill="#0f172a" stroke="#06b6d4" stroke-width="4"/>
+  <circle cx="100" cy="100" r="45" fill="#ea580c"/>
+  <text x="100" y="105" fill="#ffffff" font-size="14" font-family="Orbitron" text-anchor="middle">ANTRIX MARS</text>
+</svg>

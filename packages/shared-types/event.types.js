@@ -1,0 +1,14 @@
+export const EventSeverity = {
+  INFO: 'INFO',
+  WARNING: 'WARNING',
+  ERROR: 'ERROR',
+  CRITICAL: 'CRITICAL'
+};
+
+export const EventCategory = {
+  COMMUNICATION: 'COMMUNICATION',
+  NAVIGATION: 'NAVIGATION',
+  POWER: 'POWER',
+  AI_EXECUTIVE: 'AI_EXECUTIVE',
+  ENVIRONMENT: 'ENVIRONMENT'
+};

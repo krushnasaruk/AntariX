@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ScenarioConfig",
+  "description": "Versioned Scenario Configuration Schema for Mars Digital Twin",
+  "version": "1.0.0",
+  "type": "object",
+  "properties": {
+    "scenarioId": { "type": "string" },
+    "seed": { "type": "integer" },
+    "mission": { "type": "string" },
+    "initialBattery": { "type": "number" },
+    "weather": { "type": "string" },
+    "communication": { "type": "string" },
+    "roverHealth": { "type": "string" },
+    "hazards": { "type": "array" },
+    "obstacles": { "type": "array" },
+    "terrainVariation": { "type": "number" },
+    "sensorNoise": { "type": "number" },
+    "failureInjection": { "type": "array" }
+  },
+  "required": ["scenarioId", "seed", "mission"]
+}

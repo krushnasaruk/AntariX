@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.backend
+    ports:
+      - "4000:4000"
+    environment:
+      - PORT=4000
+      - COMMUNICATION_MODE=demo
+      - COMMUNICATION_LATENCY_SECONDS=2
+    networks:
+      - mars-net
+
+  frontend:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.frontend
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:4000
+    depends_on:
+      - backend
+    networks:
+      - mars-net
+
+  ai-engine:
+    build:
+      context: .
+      dockerfile: infrastructure/docker/Dockerfile.ai
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+    networks:
+      - mars-net
+
+networks:
+  mars-net:
+    driver: bridge

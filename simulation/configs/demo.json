@@ -1,0 +1,6 @@
+{
+  "name": "Demo Mode",
+  "latencySeconds": 0,
+  "packetLossRate": 0,
+  "dustStormActive": false
+}
